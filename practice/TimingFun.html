@@ -1,0 +1,31 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+
+<script type="text/javascript">
+
+var id =0;
+var sec =0;
+   function timing(){
+    document.getElementById("one").innerHTML="You are "+ sec + "sec late..";
+    sec++;
+}
+function start(){
+    id  =window.setInterval(timing,1000);
+}
+function stop(){
+    window.clearTimeout(id);
+}
+</script>
+      
+    </head>
+    <body >
+        <button onclick="start()">Start</button>
+        <br><br>
+        <h1 id="one">Unstoppable</h1>
+       <br><br>
+       <button onclick="stop()">Stop</button>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+
+<script type="text/javascript">
+    var opacity = 0;
+    var id=0;
+    function animation(){
+
+        var img = document.getElementById("img1");
+        opacity =Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        console.log(opacity);
+        if(opacity>0){
+            opacity = opacity-0.1;
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(id);
+        }
+
+    }
+    function fadeOut(){
+
+        id =window.setInterval(animation,200);
+    
+    }
+
+
+</script>
+      
+    </head>
+    <body >
+        <button onclick="fadeOut()">FadeOut</button>
+        <br><br>
+        <img id="img1" src="img/background.png" width="260"/>
+       <br><br>
+       <button onclick="fadeIn()">FadeIn</button>
+    </body>
+</html>

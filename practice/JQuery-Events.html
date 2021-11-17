@@ -1,0 +1,77 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+<link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body >
+        <button >Submit</button>
+       <div id="firstdiv" class="heading">
+       <p>First paragraph in fist div</p>
+    </div>
+    <div id="seconddiv" class="heading">
+        <p>Second paragraph in second div</p>
+     </div>
+     <div id="thirddiv" class="heading">
+        <ul >
+            <li id="list1">Hello World ONE</li>
+            <li >Hello World TWO</li>
+            <li >Hello World THREE</li>
+        </ul>
+     </div>
+     <input type="text" />
+     <br><br>
+     <input type="text" />
+
+     <input id="one" type="text">
+   
+      
+       
+    </body>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){   //with this after loading hole HTML then only 
+                                        // script will run (or) called
+
+          //  $("button").click(fade);  // onclick event by JQuery librery
+
+          //$("button").mouseenter(fade);
+          //$("button").mouseleave(fade1);
+
+         //$("button").hover(fade,fade1);  combination of mouse enter,leave
+         //$("button").mousedown(fade);
+         //$("button").mouseup(fade1);
+
+         $("p").on({mouseenter : function(){
+
+            $(this).css("background-color" ,"green");
+         },
+        mouseleave : function(){
+            $(this).css("background-color","white");
+        }
+        })
+
+        function fade(){
+        $("div p").fadeOut(200);
+        }
+        function fade1(){
+            $("div p").fadeIn(200);
+        }
+        });
+
+        $("input").focus(function(){
+            $(this).css("background-color", "yellow");
+        })
+        $("input").blur(function(){
+
+            $(this).css("background-color", "green");
+        })
+
+        $("#one").keypress(function(){
+     $(this).hide();
+        });
+    
+    </script>
+
+</html>

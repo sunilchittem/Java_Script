@@ -1,0 +1,37 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+
+<script  type="text/javascript">
+    
+   function validation(){
+
+       var name = document.getElementById("uname");
+       var pass = document.getElementById("passs");
+       if(name.value.trim()=="" || pass.value.trim()==""){
+           alert("fields can be lank");
+          return false;
+       }
+       else{
+           return true;
+       }
+   }
+
+</script>
+      
+    </head>
+    <body >
+    <form onsubmit=  "return validation()" action="result.html">
+        <input id="uname" type="text" required placeholder="enter user name" />
+        <br><br>
+        <input id="pass" type="password" placeholder="enter password" />
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+       
+           
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+
+<script  type="text/javascript">
+    
+   function validation(){
+
+       var name = document.getElementById("uname");
+       var pass = document.getElementById("pass");
+       
+       if(name.value.trim()==""){
+           alert("User Name can not be NULL");
+           name.style.border="solid 2px red";
+           document.getElementById("lab1").style.visibility="visible";
+           return false;
+       }
+       else if(pass.value.trim()==""){
+        alert("Password can not be NULL");
+        pass.style.border="solid 2px red";
+        document.getElementById("lab2").style.visibility="visible";
+        return false;
+       }
+       else if(pass.value.trim().length<5){
+           alert("Password is too weak");
+           pass.style.border="solid 2px red";
+           document.getElementById("lab2").style.visibility="visible";
+           return false;
+       }
+       else{
+           return true;
+       }
+   }
+
+</script>
+      
+    </head>
+    <body >
+    <form onsubmit=  "return validation()" action="result.html">
+        <input id="uname" type="text" placeholder="enter user name" />
+        <label id="lab1" style="color: red; visibility: hidden;">Invalid</label>
+        <br><br>
+        <input id="pass" type="password" placeholder="enter password" />
+        <label id="lab2" style="color: red; visibility: hidden;">Invalid</label>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+           
+    </body>
+</html>

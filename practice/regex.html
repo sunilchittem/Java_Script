@@ -1,0 +1,44 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+
+<script type="text/javascript">
+    
+   function validation(){
+
+   var data = document.getElementById("uname");
+   //var regx = /[a-z A-Z]007/;   random text validation
+  // var regx = /^[6-9]\d{9}$/;    mobile number validation
+  var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z\-]+).([a-z]{2,10})(.[a-z]{2,8})?$/; // email valiation
+
+
+    if(regx.test(data.value)){
+        document.getElementById("lab1").innerHTML="Valid";
+        data.style.border="solid 2px green";
+        document.getElementById("lab1").style.visibility="visible";
+        document.getElementById("lab1").style.color="green";
+    }
+    else{
+        document.getElementById("lab1").innerHTML="Invalid";
+        data.style.border="solid 2px red";
+        document.getElementById("lab1").style.visibility="visible";
+        document.getElementById("lab1").style.color="red";
+    }
+   }
+
+</script>
+      
+    </head>
+    <body >
+   
+        <input id="uname" type="text" placeholder="enter user name" />
+        <label id="lab1" style="visibility: hidden;">Invalid</label>
+       
+        <br>
+        <button onclick="validation()">Submit</button>
+   
+           
+    </body>
+</html>

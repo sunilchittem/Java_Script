@@ -1,0 +1,33 @@
+.heading{
+    border: solid 2px red;
+    margin: 2px;
+ padding: 3px;
+    
+}
+
+.animate{
+    height: 50px;
+    width: 50px;
+    background-color: royalblue;
+    padding: 2px;
+    position: absolute;
+    opacity: 0.4;
+}
+
+.divStyle{
+    border: solid 2px blue;
+    color: rgb(230, 163, 39);
+
+}
+
+.newclass{
+    color: red;
+    margin: 2px;
+    border: aqua 2px solid;
+    background-color: black;
+}
+
+.fontManipulate{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: chartreuse;
+}

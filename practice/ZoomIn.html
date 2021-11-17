@@ -1,0 +1,54 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+
+<script type="text/javascript">
+   
+    var width = 100;
+    var diff =2;
+    var id = 0;
+    var id1 =0;
+
+   function increase(){
+
+   id  = window.setInterval(zoomIn,20);
+   }
+
+   function zoomIn(){
+       if(width<200){
+
+            width = width+diff;
+
+            document.getElementById("img1").style.width=width;
+            console.log(width);
+       }else{
+           clearInterval(id);
+       }
+   }
+
+   function decrease(){
+
+id1  = window.setInterval(zoomOut,20);
+}
+
+function zoomOut(){
+    if(width>100){
+
+         width = width-diff;
+
+         document.getElementById("img1").style.width=width;
+    }else{
+        clearInterval(id1);
+    }
+}
+</script>
+      
+    </head>
+    <body >
+       
+        <img onmouseover="increase()" onmouseout="decrease()" id="img1" src="img/heart.jpg" width="100"/>
+       
+    </body>
+</html>

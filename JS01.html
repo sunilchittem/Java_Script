@@ -1,0 +1,50 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="jqueryui/jquery-ui.css" />
+<link rel="stylesheet" href="jqueryui/jquery-ui.structure.css" />
+<link rel="stylesheet" href="jqueryui/jquery-ui.theme.css" />
+    </head>
+    <body >
+        <h1>Accordion using JQuery UI</h1>
+        <div id="mydiv">
+            <h3>Java</h3>
+                <p>Java is platform independent and it server side developing language</p>
+            <h3>JavaScript</h3>
+                <p>JavaScript is an ondemand language which used to develop both
+                    server side,cllient side and to enhance the features.
+                    JavaScript is an ondemand language which used to develop both
+                    server side,cllient side and to enhance the features.
+                    JavaScript is an ondemand language which used to develop both
+                    server side,cllient side and to enhance the features.
+                    JavaScript is an ondemand language which used to develop both
+                    server side,cllient side and to enhance the features.
+                </p>
+            <h3>.Net</h3>
+                <p>.Net is not a language it a framework which support other languages
+                        for developing.
+                </p>
+        </div>
+         
+       
+        
+    </body>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="jqueryui/jquery-ui.js"></script>
+    <script type="text/javascript">
+       
+        $(document).ready(function(){
+            $("#mydiv").accordion({
+                collapsible :true,
+                heightStyle : true
+            });
+
+        });
+        
+
+    </script>
+
+</html>

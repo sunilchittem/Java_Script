@@ -1,0 +1,58 @@
+<html>
+    <head>
+<title>
+    My Title
+</title>
+<link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body >
+        <button id="btn1" >Submit</button>
+        <button id="btn2">Animate</button>
+       <div id="firstdiv" class="heading">
+       <p>First paragraph in fist div</p>
+    </div>
+    <div id="seconddiv" class="heading">
+        <p>Second paragraph in second div</p>
+     </div>
+     <div id="thirddiv" class="heading">
+        <ul >
+            <li id="list1">Hello World ONE</li>
+            <li >Hello World TWO</li>
+            <li >Hello World THREE</li>
+        </ul>
+     </div>
+<br>
+     <div id="div1" class="animate">
+        Cube
+    </div>
+       
+    </body>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){   //with this after loading hole HTML then only 
+                                        // script will run (or) called
+
+    $("#btn2").click(function(){
+        $("#div1").animate({
+            left: '150px',
+            opacity : '1',
+            height :'100px',
+            width :'100px'
+        },1500);
+    });
+
+    $("#btn1").click(function(){
+
+        $("#firstdiv").slideUp(2000,function(){
+            alert("done with sliding UP");
+        });
+        
+        $("#firstdiv").slideDown(2000,function(){
+            alert("done with sliding down");
+        });
+    })
+});
+    
+    </script>
+
+</html>
